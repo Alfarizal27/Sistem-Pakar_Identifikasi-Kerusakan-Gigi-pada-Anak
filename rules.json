@@ -1,0 +1,76 @@
+{
+  "rules": [
+    {
+      "id": "R1",
+      "if": ["Luka pada gusi", "Gigi terasa sakit", "Pasien mengalami demam"],
+      "premise_cf_expert": {"Luka pada gusi": 0.8, "Gigi terasa sakit": 0.4, "Pasien mengalami demam": 0.6},
+      "then": "Ulkus Dekubitus"
+    },
+    {
+      "id": "R2",
+      "if": ["Gusi mudah berdarah", "Gusi bengkak dan sakit", "Nyeri saat mengunyah makanan", "Gusi turun atau menyusut", "Terdapat plak pada gigi"],
+      "premise_cf_expert": {"Gusi mudah berdarah": 0.4, "Gusi bengkak dan sakit": 0.8, "Nyeri saat mengunyah makanan": 0.6, "Gusi turun atau menyusut": 0.8, "Terdapat plak pada gigi": 0.4},
+      "then": "Gingivitis"
+    },
+    {
+      "id": "R3",
+      "if": ["Pasien mengalami demam", "Gusi bengkak dan sakit", "Nyeri saat mengunyah makanan", "Terdapat nanah pada gusi", "Gigi sensitif terhadap makanan panas atau dingin"],
+      "premise_cf_expert": {"Pasien mengalami demam": 0.4, "Gusi bengkak dan sakit": 0.8, "Nyeri saat mengunyah makanan": 0.6, "Terdapat nanah pada gusi": 0.4, "Gigi sensitif terhadap makanan panas atau dingin": 0.8},
+      "then": "Abses"
+    },
+    {
+      "id": "R4",
+      "if": ["Nyeri spontan", "Gigi terasa sakit saat makan makanan panas atau dingin", "Ada lubang pada gigi"],
+      "premise_cf_expert": {"Nyeri spontan": 0.6, "Gigi terasa sakit saat makan makanan panas atau dingin": 0.6, "Ada lubang pada gigi": 0.8},
+      "then": "Pulpitis"
+    },
+    {
+      "id": "R5",
+      "if": ["Munculnya gigi permanen berdempetan dengan gigi susu", "Gigi susu goyang"],
+      "premise_cf_expert": {"Munculnya gigi permanen berdempetan dengan gigi susu": 1.0, "Gigi susu goyang": 0.8},
+      "then": "Persistensi"
+    },
+    {
+      "id": "R6",
+      "if": ["Gusi bengkak dan sakit", "Gusi mudah berdarah", "Terdapat plak pada gigi"],
+      "premise_cf_expert": {"Gusi bengkak dan sakit": 0.4, "Gusi mudah berdarah": 0.6, "Terdapat plak pada gigi": 0.8},
+      "then": "Calculus"
+    },
+    {
+      "id": "R7",
+      "if": ["Nyeri saat mengunyah makanan", "Gigi sensitif terhadap makanan panas atau dingin", "Terlihat retakan pada gigi atau gigi terlihat cacat"],
+      "premise_cf_expert": {"Nyeri saat mengunyah makanan": 0.4, "Gigi sensitif terhadap makanan panas atau dingin": 0.8, "Terlihat retakan pada gigi atau gigi terlihat cacat": 1.0},
+      "then": "Gigi Fraktur"
+    },
+    {
+      "id": "R8",
+      "if": ["Nyeri saat mengunyah makanan", "Gusi berdarah", "Mulut terasa tidak enak", "Terdapat nanah pada gusi"],
+      "premise_cf_expert": {"Nyeri saat mengunyah makanan": 0.6, "Gusi berdarah": 0.6, "Mulut terasa tidak enak": 0.4, "Terdapat nanah pada gusi": 0.6},
+      "then": "Periodontitis"
+    },
+    {
+      "id": "R9",
+      "if": ["Warna gigi berubah atau berbeda dengan yang lainnya", "Gigi terasa sakit saat makan makanan panas atau dingin"],
+      "premise_cf_expert": {"Warna gigi berubah atau berbeda dengan yang lainnya": 0.8, "Gigi terasa sakit saat makan makanan panas atau dingin": 0.6},
+      "then": "Gangren Pulpa"
+    },
+    {
+      "id": "R10",
+      "if": ["Sakit gigi", "Gigi sensitif terhadap makanan panas atau dingin", "Ada lubang pada gigi", "Noda berwarna cokelat, hitam, atau putih pada permukaan gigi"],
+      "premise_cf_expert": {"Sakit gigi": 0.6, "Gigi sensitif terhadap makanan panas atau dingin": 0.4, "Ada lubang pada gigi": 0.8, "Noda berwarna cokelat, hitam, atau putih pada permukaan gigi": 0.8},
+      "then": "Karies Gigi"
+    },
+    {
+      "id": "R2b",
+      "if": ["Gusi bengkak dan sakit", "Terdapat plak pada gigi"],
+      "premise_cf_expert": {"Gusi bengkak dan sakit": 0.6, "Terdapat plak pada gigi": 0.4},
+      "then": "Gingivitis"
+    },
+    {
+      "id": "R11",
+      "if": ["Gingivitis"],
+      "premise_cf_expert": {"Gingivitis": 0.7},
+      "then": "Risiko Peradangan"
+    }
+  ]
+}
